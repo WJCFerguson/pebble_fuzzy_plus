@@ -1,0 +1,56 @@
+{
+    "uuid": "b367239b-00ef-47a3-90e6-aa415f2b11cb",
+    "shortName": "FuzzyPlus",
+    "longName": "FuzzyPlus",
+    "companyName": "The Faff Organization",
+    "versionLabel": "1.0",
+    "sdkVersion": "3",
+    "targetPlatforms": ["aplite", "basalt"],
+    "watchapp": {
+        "watchface": true
+    },
+    "appKeys": {
+        "dummy": 0
+    },
+    "resources": {
+        "media": [
+            {
+                "characterRegex": "[ a-z]",
+                "type": "font",
+                "name": "FONT_UBUNTU_48",
+                "file": "fonts/UBUNTU_48.ttf"
+            },
+            {
+                "characterRegex": "[ a-z]",
+                "type": "font",
+                "name": "FONT_UBUNTU_38",
+                "file": "fonts/UBUNTU_38.ttf"
+            },
+            {
+                "characterRegex": "[ a-z]",
+                "type": "font",
+                "name": "FONT_UBUNTU_28",
+                "file": "fonts/UBUNTU_28.ttf"
+            },
+            {
+                "characterRegex": "[ a-z]",
+                "type": "font",
+                "name": "FONT_UBUNTU_20",
+                "file": "fonts/UBUNTU_20.ttf"
+            },
+            {
+                "characterRegex": "[:,. 0-9A-Za-z]",
+                "type": "font",
+                "name": "FONT_UBUNTU_16",
+                "file": "fonts/UBUNTU_16.ttf"
+            },
+            {
+                "characterRegex": "[apm]",
+                "type": "font",
+                "name": "FONT_UBUNTU_10",
+                "file": "fonts/UBUNTU_10.ttf"
+            }
+
+        ]
+    }
+}
