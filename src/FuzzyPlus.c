@@ -1,5 +1,6 @@
 /* Fuzzy text watchface that shows more detail when shaken */
 #include <pebble.h>
+#include <autoconfig.h>
 
 enum
 {
@@ -251,9 +252,23 @@ main_window_unload(Window* window)
 }
 
 /* ========================================================================== */
+/* autoconfig received handler */
+static void
+in_received_handler(DictionaryIterator *iter,
+                    void *context)
+{
+    autoconfig_in_received_handler(iter, context);
+
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "Configuration updated. BeforeText: %s", getBeforetext()); 
+}
+
+/* ========================================================================== */
 static void
 init()
 {
+    autoconfig_init();
+    app_message_register_inbox_received(in_received_handler);
+
     /* Create main Window */
     s_main_window = window_create();
     window_set_window_handlers(s_main_window, (WindowHandlers) {
@@ -283,6 +298,8 @@ deinit()
     window_destroy(s_main_window);
 
     accel_tap_service_unsubscribe();
+
+    autoconfig_deinit();
 }
 
 /* ========================================================================== */

@@ -12,6 +12,23 @@
     "appKeys": {
         "dummy": 0
     },
+    "capabilities": [ "configurable" ],
+    "appKeys" : {
+        "beforeText" : 0
+    },
+    "preferences": {
+        "embedded": true,
+        "debug": true,
+        "description": "Configure the <strong>Fuzzy Plus</strong> watch face",
+        "items": [{
+            "name": "beforeText",
+            "title": "Before Text",
+            "description": "Text for when it's well before the quarter",
+            "type": "string",
+            "max-length": 14,
+            "default": "pushing"
+        }]
+    },
     "resources": {
         "media": [
             {
